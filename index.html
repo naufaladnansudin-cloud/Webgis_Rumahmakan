@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Peta WebGIS lokasi rumah makan di wilayah Tataaran.">
+<title>Jelajah Kuliner Tataaran | WebGIS</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="user-page">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">🍽</span><span>Jelajah<span class="brand-light">Kuliner</span><small>TATAARAN • WEBGIS</small></span></a>
+  <nav><a class="nav-active" href="index.html">Peta Kuliner</a></nav>
+</header>
+<main class="user-layout">
+  <aside class="side-panel">
+    <div class="eyebrow">TEMUKAN RASA FAVORITMU</div>
+    <h1>Jelajahi rumah makan <span>di Tataaran.</span></h1>
+    <p class="muted">Temukan tempat makan, lihat informasi lokasi, dan kunjungi tempat pilihanmu.</p>
+    <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari nama rumah makan..."></label>
+    <div class="filter-row"><strong id="placeCount">8 tempat ditemukan</strong><span class="map-tag">OpenStreetMap</span></div>
+    <div id="restaurantList" class="restaurant-list"></div>
+    <div class="panel-foot"><span class="dot"></span> Peta interaktif • Data contoh tersimpan pada website</div>
+  </aside>
+  <section class="map-wrap">
+    <div id="map"></div>
+    <div class="map-note"><span class="map-note-icon">📍</span><div><strong>Lokasi rumah makan</strong><small>Klik marker untuk melihat detail</small></div></div>
+  </section>
+</main>
+<div id="detailModal" class="modal hidden">
+  <div class="modal-backdrop" data-close></div>
+  <article class="detail-card">
+    <button class="modal-close" data-close aria-label="Tutup">×</button>
+    <div id="detailContent"><div class="loading">Memuat detail...</div></div>
+  </article>
+</div>
+<script src="data.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/map-static.js"></script>
+</body></html>
